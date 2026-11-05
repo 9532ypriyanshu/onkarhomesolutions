@@ -1,0 +1,1888 @@
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onkar Home Solutions | Solar Energy Experts in Lucknow</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23388e3c'/><stop offset='50%25' stop-color='%23888d1d'/><stop offset='100%25' stop-color='%23f59e0b'/></linearGradient></defs><path d='M50 20 L57 33 L71 30 L67 44 L80 50 L67 56 L71 70 L57 67 L50 80 L43 67 L29 70 L33 56 L20 50 L33 44 L29 30 L43 33 Z' fill='%23ffeb3b' stroke='%23388e3c' stroke-width='3'/><circle cx='50' cy='50' r='12' fill='none' stroke='%23388e3c' stroke-width='3'/></svg>">
+  <meta name="description" content="Switch to clean solar power with Onkar Home Solutions, Lucknow. Get up to ₹78,000 PM Surya Ghar Yojana Subsidy. Cut your electricity bills to zero!">
+  <!-- HEAD tag ke andar add karein -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  .timeline-line-bg { background: rgba(226, 232, 240, 0.8); }
+  .timeline-line-progress {
+    background: linear-gradient(180deg, #F97316 0%, #EAB308 50%, #10B981 100%);
+    transition: height 0.1s linear;
+  }
+  .step-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95) rotateX(10deg);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  .step-card.active {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+  .step-badge {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s;
+  }
+  .step-card.active .step-badge {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .node-icon {
+    transition: all 0.4s ease;
+    transform: scale(0.8);
+  }
+  .step-card.active ~ .node-container .node-icon,
+  .node-container.active .node-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+  }
+  .glass-card-inner {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease;
+  }
+  .glass-card-inner:hover {
+    transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 20px 40px -10px rgba(249, 115, 22, 0.15), 0 0 0 1px rgba(249, 115, 22, 0.2);
+  }
+</style>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            solar: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b', /* Primary Solar Gold */
+              600: '#d97706',
+              700: '#b45309'
+            },
+            leaf: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981', /* Primary Leaf Green */
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b'  /* Deep Forest */
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .page-section {
+      display: none;
+      animation: fadeIn 0.35s ease-in-out forwards;
+    }
+    .page-section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    .solar-gradient {
+      background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #d97706 100%);
+    }
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+  </style>
+  
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+  <!-- TOP BAR -->
+  <div class="bg-leaf-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-leaf-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+        <span class="flex items-center gap-1.5 text-solar-300 font-medium">
+          <i class="fa-solid fa-location-dot"></i> Krishna Nagar , Alambagh, Lucknow, Uttar Pradesh
+        </span>
+        <span class="hidden md:inline text-leaf-400">|</span>
+        <span class="flex items-center gap-1.5 text-slate-200">
+          <i class="fa-solid fa-certificate text-solar-400"></i> PM Surya Ghar Yojana Certified Vendor
+        </span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:09792222261" class="hover:text-solar-300 transition-colors flex items-center gap-1.5 font-semibold">
+          <i class="fa-solid fa-phone-volume text-solar-400"></i> 097922 22261
+          
+        </a>
+        <span class="text-leaf-400">|</span>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>DISCOM Net-Metering Authorized</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logo -->
+        <a href="#home" onclick="navigateTo('home')" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-leaf-700 to-solar-500 flex items-center justify-center text-white shadow-md shadow-leaf-900/10 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-sun text-2xl text-yellow-200 animate-spin-slow"></i>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-black tracking-tight text-leaf-900 flex items-center gap-1">
+              ONKAR <span class="text-solar-600 font-extrabold">HOME</span><span class="text-xl sm:text-2xl font-black tracking-tight text-leaf-900 flex items-center gap-1">SOLUTIONS</span>
+            </div>
+           </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-1 font-medium text-sm">
+          <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-4 py-2 rounded-lg text-slate-700 hover:text-leaf-700 hover:bg-leaf-50 transition">Home</button>
+          <button onclick="navigateTo('about')" id="nav-about" class="nav-btn px-4 py-2 rounded-lg text-slate-700 hover:text-leaf-700 hover:bg-leaf-50 transition">About Us</button>
+          <button onclick="navigateTo('services')" id="nav-services" class="nav-btn px-4 py-2 rounded-lg text-slate-700 hover:text-leaf-700 hover:bg-leaf-50 transition">Solar Solutions</button>
+          <button onclick="navigateTo('pm-surya')" id="nav-pm-surya" class="nav-btn px-4 py-2 rounded-lg text-slate-700 hover:text-leaf-700 hover:bg-leaf-50 transition flex items-center gap-1.5">
+            <span class="inline-block w-2 h-2 rounded-full bg-solar-500"></span> PM Surya Ghar Yojana
+          </button>
+          <button onclick="navigateTo('contact')" id="nav-contact" class="nav-btn px-4 py-2 rounded-lg text-slate-700 hover:text-leaf-700 hover:bg-leaf-50 transition">Contact Us</button>
+        </nav>
+
+        <!-- CTA & Quick Call -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openBookingModal()" class="bg-gradient-to-r from-solar-500 to-solar-600 hover:from-solar-600 hover:to-solar-700 text-slate-900 font-bold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-calendar-check"></i> Book Free Site Visit
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-slate-700 hover:text-leaf-700 focus:outline-none p-2 rounded-lg">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-leaf-50 hover:text-leaf-700">Home</button>
+      <button onclick="navigateTo('about'); toggleMobileMenu();" class="block w-full text-left px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-leaf-50 hover:text-leaf-700">About Us</button>
+      <button onclick="navigateTo('services'); toggleMobileMenu();" class="block w-full text-left px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-leaf-50 hover:text-leaf-700">Solar Solutions & Services</button>
+      <button onclick="navigateTo('pm-surya'); toggleMobileMenu();" class="block w-full text-left px-3 py-2.5 rounded-lg text-base font-semibold text-solar-700 bg-solar-50 hover:bg-solar-100">PM Surya Ghar Yojana (₹78k Subsidy)</button>
+      <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-left px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-leaf-50 hover:text-leaf-700">Contact & Address</button>
+      <div class="pt-2">
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full bg-solar-500 text-slate-900 font-bold py-3 rounded-xl text-center shadow">
+          <i class="fa-solid fa-calendar-check mr-2"></i> Book Free Site Visit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN VIEW CONTAINER (5 Pages) -->
+  <main class="flex-grow">
+
+    <!-- ========================================== -->
+    <!-- 1. HOME PAGE                               -->
+    <!-- ========================================== -->
+    <section id="page-home" class="page-section active">
+      
+      <!-- HERO SECTION -->
+      <div class="relative bg-slate-900 text-white overflow-hidden min-h-[580px] lg:min-h-[640px] flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://cdn.orsted.com/-/media/www/images/corp/com/orsted_solar_01.jpg?mh=1440" alt="Rooftop Solar Installation in India" class="w-full h-full object-cover opacity-25 object-center">
+          <div class="absolute inset-0 bg-gradient-to-r from-leaf-950/95 via-leaf-900/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+          <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-8 space-y-6">
+              
+              <!-- Badge -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-solar-400/20 border border-solar-400/40 text-solar-300 text-xs sm:text-sm font-semibold tracking-wide">
+                <i class="fa-solid fa-award text-solar-400"></i> Lucknow's Trusted Rooftop Solar Installer
+              </div>
+
+              <!-- Main Headline -->
+              <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-tight">
+                Switch to Clean Energy with <br class="hidden sm:inline">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-solar-400 to-yellow-200">Onkar Home Solutions</span> — 
+                <span class="text-white block sm:inline">Cut Your Electricity Bills to Zero!</span>
+              </h1>
+
+              <!-- Subtitle -->
+              <p class="text-base sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed">
+                Empowering homeowners & businesses in Lucknow with premium On-Grid & Hybrid Solar Systems. Avail up to <strong>₹78,000 Direct Central Subsidy</strong> under PM Surya Ghar Muft Bijli Yojana with zero hassle.
+              </p>
+
+              <!-- Action CTAs -->
+              <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                <button onclick="openBookingModal()" class="bg-solar-500 hover:bg-solar-400 text-slate-900 text-base font-bold px-8 py-4 rounded-xl shadow-xl shadow-solar-500/25 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                  <i class="fa-solid fa-bolt-lightning text-lg"></i> Book Free Site Visit
+                </button>
+                <button onclick="navigateTo('pm-surya')" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-4 rounded-xl backdrop-blur transition flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-calculator text-solar-400"></i> Check Subsidy Eligibility
+                </button>
+              </div>
+
+              <!-- USPs / Trust badges -->
+              <div class="pt-6 border-t border-white/15 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-shield-halved text-solar-400 text-base"></i>
+                  <span>25-Year Panel Warranty</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-file-invoice text-leaf-300 text-base"></i>
+                  <span>Net Metering with UPPCL</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-indian-rupee-sign text-solar-400 text-base"></i>
+                  <span>₹0 Downpayment EMI</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-screwdriver-wrench text-leaf-300 text-base"></i>
+                  <span>Turnkey Installation</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Quick Inquiry Card on Hero -->
+            <div class="lg:col-span-4">
+              <div class="bg-white rounded-2xl p-6 sm:p-7 shadow-2xl border border-slate-100 text-slate-900">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="font-bold text-lg text-leaf-900">Get Instant Solar Quote</h3>
+                  <span class="bg-solar-100 text-solar-800 text-xs px-2 py-1 rounded-full font-bold">Fast Callback</span>
+                </div>
+                <form id="hero-quick-form" onsubmit="handleQuickSubmit(event)" class="space-y-3.5">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Your Full Name</label>
+                    <input type="text" id="quick-name" required placeholder="e.g. Rajesh Kumar" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">WhatsApp / Phone Number</label>
+                    <input type="tel" id="quick-phone" required placeholder="097922 22261" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Avg. Monthly Electricity Bill</label>
+                    <select id="quick-bill" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-leaf-500 focus:outline-none bg-white">
+                      <option value="₹1,500 - ₹3,000 (Recommended 2kW)">₹1,500 - ₹3,000 / month</option>
+                      <option value="₹3,000 - ₹6,000 (Recommended 3kW-4kW)">₹3,000 - ₹6,000 / month</option>
+                      <option value="₹6,000 - ₹12,000 (Recommended 5kW-8kW)">₹6,000 - ₹12,000 / month</option>
+                      <option value="Above ₹12,000 (10kW+ Commercial)">Above ₹12,000 / month</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1">Area / Locality in Lucknow</label>
+                    <input type="text" id="quick-locality" required placeholder="e.g. Alambagh, Gomti Nagar" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-lg focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+                  </div>
+                  <button type="submit" class="w-full bg-leaf-700 hover:bg-leaf-800 text-white font-bold py-3 rounded-lg text-sm shadow transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-300 text-lg"></i> Send via WhatsApp
+                  </button>
+                </form>
+                <p class="text-[11px] text-slate-400 text-center mt-3">We respect your privacy. No spam guaranteed.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- INTRODUCTION SECTION -->
+      <section class="py-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-5">
+              <div class="inline-flex items-center gap-2 text-leaf-700 font-bold text-sm uppercase tracking-wider">
+                <i class="fa-solid fa-circle-check text-solar-500"></i> Trusted Solar Partner In Lucknow
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                Powering Lucknow With High-Efficiency Solar Energy
+              </h2>
+              <p class="text-slate-600 leading-relaxed">
+                Welcome to <strong>Onkar Home Solutions</strong>, Lucknow's leading rooftop solar EPC company based in Alambagh. We specialize in providing turnkey solar solutions that turn harsh UP summer heat into clean, cost-free electricity for your household or commercial enterprise.
+              </p>
+              <p class="text-slate-600 leading-relaxed">
+                From initial shadow analysis and DISCOM technical approvals with Madhyanchal Vidyut Vitran Nigam (MVVNL/UPPCL) to multi-brand panel selection, durable mounting structures, and direct government subsidy processing — our certified solar engineers manage everything end-to-end.
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+                <div class="p-4 rounded-xl bg-leaf-50 border border-leaf-100">
+                  <div class="text-2xl font-black text-leaf-800">500+</div>
+                  <div class="text-xs text-slate-600 font-medium mt-1">Installations Across UP</div>
+                </div>
+                <div class="p-4 rounded-xl bg-solar-50 border border-solar-100">
+                  <div class="text-2xl font-black text-solar-700">₹78,000</div>
+                  <div class="text-xs text-slate-600 font-medium mt-1">Max Central Subsidy</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1">
+                  <div class="text-2xl font-black text-slate-800">100%</div>
+                  <div class="text-xs text-slate-600 font-medium mt-1">Discom Approvals</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image collage -->
+            <div class="relative">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src="https://perfectsolarenergy.in/wp-content/uploads/2026/07/pse-residential-solar-faridabad-hero.jpg" alt="Solar Rooftop Engineer Lucknow" class="w-full h-[380px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                  <div class="font-bold text-lg">Engineered for Indian Weather</div>
+                  <div class="text-sm text-slate-200">Heavy-gauge GI structures resistant to cyclone winds & extreme heat.</div>
+                </div>
+              </div>
+              <div class="absolute -bottom-6 -right-4 sm:right-6 bg-solar-500 text-slate-900 p-4 rounded-2xl shadow-xl flex items-center gap-3">
+                <i class="fa-solid fa-headset text-2xl"></i>
+                <div>
+                  <div class="text-xs font-bold uppercase">Call Our Solar Expert</div>
+                  <div class="font-black text-base">097922 22261</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANIMATED TIMELINE SECTION START -->
+<section id="process-timeline-section" class="py-20 relative bg-amber-50/40 border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase font-extrabold text-solar-600 tracking-widest bg-solar-100 px-3.5 py-1.5 rounded-full">Seamless Installation</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-3 font-heading">From design to switch-on</h2>
+      <p class="text-slate-500 mt-2 text-sm md:text-base">Scroll down to explore how we bring solar energy to your home.</p>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative" id="timeline-container">
+      
+      <!-- Center Progress Line -->
+      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 -translate-x-1/2 w-1.5 timeline-line-bg rounded-full overflow-hidden">
+        <div class="w-full timeline-line-progress h-0" id="timeline-progress"></div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="1">
+        <div class="w-full md:w-1/2 md:pr-12 md:text-right pl-14 md:pl-0">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 1</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Your roof, designed in minutes</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">From your address and bill, our design engine models your roof in 3D, simulates the sun through the year, engineers the structure and places the panels. No waiting for a site visit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center border-4 border-white shadow-md">
+            <i data-lucide="box" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="hidden md:block w-1/2"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="2">
+        <div class="hidden md:block w-1/2"></div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center border-4 border-white shadow-md">
+            <i data-lucide="video" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-12 pl-14">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 2</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Walk through it with an expert</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">On a live video session, see your plant from every side, at any hour of any month, and change it together until it is right.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="3">
+        <div class="w-full md:w-1/2 md:pr-12 md:text-right pl-14 md:pl-0">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 3</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">One agreement</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Every item and every rupee on one agreement. Pay the booking and sign, from your own money or with a loan we help arrange.</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center border-4 border-white shadow-md">
+            <i data-lucide="file-text" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="hidden md:block w-1/2"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="4">
+        <div class="hidden md:block w-1/2"></div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center border-4 border-white shadow-md">
+            <i data-lucide="package" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-12 pl-14">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 4</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Your materials, kept for you</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">We confirm your order and tell you the day your goods are ready. You pay for them, then collect them from the warehouse, or Vortex delivers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="5">
+        <div class="w-full md:w-1/2 md:pr-12 md:text-right pl-14 md:pl-0">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 5</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">A certified team installs</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">After your materials are paid for, Vortex chooses a certified team near you, or you pick one. The team fixes the day with you. Every step is photographed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center border-4 border-white shadow-md">
+            <i data-lucide="hard-hat" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="hidden md:block w-1/2"></div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="6">
+        <div class="hidden md:block w-1/2"></div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center border-4 border-white shadow-md">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-12 pl-14">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 6</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Inspected and certified</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Our engineer inspects it, and your certificate carries a QR code anyone can verify.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="relative flex flex-col md:flex-row items-center mb-16 step-row" data-step="7">
+        <div class="w-full md:w-1/2 md:pr-12 md:text-right pl-14 md:pl-0">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-solar-600 tracking-widest uppercase mb-1">STEP 7</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Net metering and subsidy</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Net metering yourself or through our partner; our desk files PM Surya Ghar and follows it until the subsidy is in your bank.</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-solar-500 text-slate-900 flex items-center justify-center border-4 border-white shadow-lg shadow-solar-500/30">
+            <i data-lucide="landmark" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="hidden md:block w-1/2"></div>
+      </div>
+
+      <!-- Step 8 -->
+      <div class="relative flex flex-col md:flex-row items-center step-row" data-step="8">
+        <div class="hidden md:block w-1/2"></div>
+        <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-10 node-container">
+          <div class="node-icon w-12 h-12 rounded-full bg-leaf-600 text-white flex items-center justify-center border-4 border-white shadow-lg shadow-leaf-600/30">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:pl-12 pl-14">
+          <div class="step-card">
+            <span class="step-badge inline-block text-xs font-extrabold text-leaf-600 tracking-widest uppercase mb-1">STEP 8</span>
+            <div class="glass-card-inner p-6 rounded-2xl">
+              <h3 class="text-xl font-bold text-slate-900 mb-2">Watched every 15 minutes</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">Free for the first 5 years, then on a low-cost care plan. If your plant slows or stops, we know before you do, and help is on its way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ANIMATED TIMELINE SECTION END -->
+
+      <!-- KEY SERVICES HIGHLIGHTS -->
+      <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-solar-600 font-bold uppercase tracking-wider text-xs sm:text-sm">Comprehensive Solar Engineering</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Tailored Clean Energy For Every Roof</h2>
+            <p class="text-slate-600 mt-3 text-base">Select the solar system designed precisely to your electrical load, budget, and power-backup needs.</p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Card 1: On-Grid -->
+            <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+              <div>
+                <div class="w-14 h-14 rounded-xl bg-leaf-100 text-leaf-700 flex items-center justify-center text-2xl mb-6 group-hover:bg-leaf-700 group-hover:text-white transition">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-leaf-50 text-leaf-700">Highest ROI</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">On-Grid Solar Systems</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  Directly interconnected with the Lucknow electrical grid. Export surplus units during the day via bi-directional Net Metering and reduce electricity bills up to 90%.
+                </p>
+                <ul class="text-xs text-slate-600 space-y-2 mb-6 font-medium">
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-leaf-600"></i> Eligible for PM Surya Ghar ₹78,000 Subsidy</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-leaf-600"></i> Zero battery replacement costs</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-leaf-600"></i> Payback in 3.5 to 4 years</li>
+                </ul>
+              </div>
+              <button onclick="navigateTo('services')" class="w-full py-2.5 px-4 rounded-xl border border-slate-200 text-slate-700 hover:border-leaf-600 hover:text-leaf-700 text-sm font-semibold transition text-center">
+                Learn Details <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+              </button>
+            </div>
+
+            
+
+            <!-- Card 2: Hybrid -->
+            <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col justify-between group">
+              <div>
+                <div class="w-14 h-14 rounded-xl bg-solar-100 text-solar-700 flex items-center justify-center text-2xl mb-6 group-hover:bg-solar-500 group-hover:text-slate-900 transition">
+                  <i class="fa-solid fa-battery-three-quarters"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-solar-50 text-solar-700">24x7 Power Backup</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Hybrid Solar Systems</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  The ideal harmony of grid connectivity and Lithium-ion / Tubular solar battery bank. Keep your ACs, fans, lights running without a blink even during blackout hours.
+                </p>
+                <ul class="text-xs text-slate-600 space-y-2 mb-6 font-medium">
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-solar-600"></i> Seamless auto-switching during load shedding</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-solar-600"></i> Dual benefit of net metering + backup</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-solar-600"></i> Smart power-flow management</li>
+                </ul>
+              </div>
+              <button onclick="navigateTo('services')" class="w-full py-2.5 px-4 rounded-xl border border-slate-200 text-slate-700 hover:border-solar-600 hover:text-solar-700 text-sm font-semibold transition text-center">
+                Learn Details <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+              </button>
+            </div>
+
+            <!-- Card 3: PM Surya Ghar -->
+            <div class="bg-gradient-to-br from-leaf-900 to-leaf-950 text-white rounded-2xl p-7 shadow-lg flex flex-col justify-between relative overflow-hidden group">
+              <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl text-white">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <div class="relative z-10">
+                <div class="w-14 h-14 rounded-xl bg-solar-500 text-slate-900 flex items-center justify-center text-2xl mb-6">
+                  <i class="fa-solid fa-gift"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-solar-400 text-slate-900">Govt. Initiative</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">PM Surya Ghar Yojana</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                  Get up to 300 free units monthly and direct DBT subsidy straight to your bank account. Onkar Home Solutions guides you through portal application to meter seal.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 mb-6 font-medium">
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-solar-400"></i> 1 kW: ₹30,000 Subsidy</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-solar-400"></i> 2 kW: ₹60,000 Subsidy</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-solar-400"></i> 3 kW+: Flat ₹78,000 Subsidy</li>
+                </ul>
+              </div>
+              <button onclick="navigateTo('pm-surya')" class="relative z-10 w-full py-2.5 px-4 rounded-xl bg-solar-500 hover:bg-solar-400 text-slate-900 text-sm font-bold transition text-center">
+                View Subsidy Details <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- MULTI-BRAND LOGOS SHOWCASE -->
+      <section class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-6">
+            <p class="text-xs uppercase font-bold text-slate-400 tracking-wider">Multi-Brand Authorized EPC Integrator • All Major Brands Available</p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 items-center opacity-85">
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-bolt text-solar-500 mr-1"></i> Microtek
+            </div>
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-sun text-solar-500 mr-1"></i> Adani Solar
+            </div>
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-sun text-solar-500 mr-1"></i> Premier
+            </div>
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-solar-panel text-solar-500 mr-1"></i> Waaree Solar
+            </div>
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-boldq    text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-microchip text-solar-500 mr-1"></i> Luminous
+            </div>
+            
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-layer-group text-solar-500 mr-1"></i> Loom Solar
+            </div>
+            <div class="p-3 text-center bg-slate-50 border border-slate-200 rounded-lg font-bold text-slate-700 text-sm hover:border-leaf-500 hover:text-leaf-800 transition">
+              <i class="fa-solid fa-power-off text-solar-500 mr-1"></i> UTL
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-leaf-700 font-bold uppercase tracking-wider text-xs">The Onkar Advantage</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Why Lucknow Trusts Onkar Home Solutions</h2>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-solar-500 transition">
+              <div class="w-12 h-12 rounded-lg bg-solar-100 text-solar-700 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 text-lg mb-2">Experienced Team</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                MNRE-certified rooftop engineers with meticulous knowledge of UP discom norms and high-grade safety standards.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-leaf-500 transition">
+              <div class="w-12 h-12 rounded-lg bg-leaf-100 text-leaf-700 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 text-lg mb-2">Multi-Brand Freedom</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                We are not tied to a single brand. Choose between Tata, Adani, Loom, Waaree, or Havells based on budget and roof space.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-solar-500 transition">
+              <div class="w-12 h-12 rounded-lg bg-solar-100 text-solar-700 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 text-lg mb-2">End-to-End Installation</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                From structural wind-load calculation to bi-directional net-meter testing with MVVNL — zero running around for you.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-leaf-500 transition">
+              <div class="w-12 h-12 rounded-lg bg-leaf-100 text-leaf-700 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h4 class="font-bold text-slate-900 text-lg mb-2">Dedicated After-Sales</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Local Lucknow office in Alambagh. Prompt response for panel cleaning, inverter diagnostics, and preventive checks.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS / REVIEWS -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-solar-600 font-bold uppercase tracking-wider text-xs">Customer Satisfaction</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Lucknow Residents Saving With Us</h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+              <div class="flex text-solar-500 mb-3 text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-sm italic mb-4">
+                "Our summer electricity bill in Alambagh used to cross ₹7,500 every month. Onkar Home Solutions installed a 3kW On-Grid system. Now my bill is less than ₹300! Subsidy of ₹78,000 was credited directly to my bank."
+              </p>
+              <div class="font-bold text-slate-900 text-sm">Er. Anand Srivastava</div>
+              <div class="text-xs text-slate-500">Krishna Nagar, Lucknow • 3 kW Tata Solar</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+              <div class="flex text-solar-500 mb-3 text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-sm italic mb-4">
+                "Very professional team. They showed us options between Adani Mono-PERC and Waaree TopCon. Installation was finished in 2 days and the net meter was installed without any headache."
+              </p>
+              <div class="font-bold text-slate-900 text-sm">Dr. Vandana Misra</div>
+              <div class="text-xs text-slate-500">Gomti Nagar Extension • 5 kW Hybrid System</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative">
+              <div class="flex text-solar-500 mb-3 text-sm">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-sm italic mb-4">
+                "Best solar vendor in Lucknow. They are located near Asharam Bapu Ashram Rd, Alambagh, so whenever I need quick cleaning or guidance, their technicians visit the very same day."
+              </p>
+              <div class="font-bold text-slate-900 text-sm">Sunil Verma (Businessman)</div>
+              <div class="text-xs text-slate-500">Manas Nagar, Lucknow • 10 kW Commercial</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section class="py-14 bg-gradient-to-r from-leaf-900 via-leaf-800 to-emerald-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Ready to Cut Your Electricity Bill to ₹0?</h3>
+            <p class="text-slate-300 text-sm sm:text-base">Schedule a zero-cost site survey with our solar specialists in Lucknow today.</p>
+          </div>
+          <div class="flex items-center gap-4 flex-wrap justify-center">
+            <button onclick="openBookingModal()" class="bg-solar-500 hover:bg-solar-400 text-slate-900 font-extrabold px-6 py-3 rounded-xl transition shadow">
+              Book Free Site Visit
+            </button>
+            <a href="tel:09792222261" class="border border-white/40 hover:bg-white/10 text-white font-semibold px-5 py-3 rounded-xl transition flex items-center gap-2">
+              <i class="fa-solid fa-phone"></i> 097922 22261
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. ABOUT US PAGE                           -->
+    <!-- ========================================== -->
+    <section id="page-about" class="page-section">
+      
+      <!-- Header banner -->
+      <div class="bg-gradient-to-r from-leaf-950 to-leaf-800 text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center space-y-3">
+          <span class="text-solar-400 font-bold uppercase tracking-wider text-xs" style="color:#d97706;">Pioneering Renewable Energy in UP</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold" style="color: #d97706;">About Onkar Home Solutions</h1>
+          <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base" style="color: #064e3b;">
+            Dedicated to accelerating solar adoption across Lucknow and Uttar Pradesh with engineering integrity, transparent pricing, and world-class technology.
+          </p>
+        </div>
+      </div>
+
+      <!-- Company Story -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div class="inline-flex items-center gap-2 text-solar-700 font-bold text-xs uppercase tracking-wider">
+                <i class="fa-solid fa-history"></i> Our Story & Roots
+              </div>
+              <h2 class="text-3xl font-extrabold text-slate-900">
+                Building a Cleaner, Self-Reliant Power Future for Uttar Pradesh
+              </h2>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Founded with a visionary goal to transform Lucknow’s energy landscape, <strong>Onkar Home Solutions</strong> emerged from the need for dependable, top-tier rooftop solar engineering in Central UP. For years, consumers struggled with confusing paperwork, substandard aluminum fabrication, and unreliable local vendors.
+              </p>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                We set out to change that paradigm. Operating from our central headquarters at <strong>Alambagh, Lucknow</strong>, we provide homeowner-centric engineering solutions: genuine Tier-1 Mono PERC & TopCon solar panels, robust HDG structures tested against high wind gusts, and seamless facilitation of central subsidies through the national PM Surya Ghar portal.
+              </p>
+              
+              <!-- Core pillars -->
+              <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                <div class="border-l-4 border-solar-500 pl-4 py-1">
+                  <div class="font-bold text-slate-900 text-base">Our Mission</div>
+                  <div class="text-xs text-slate-600 mt-1">To power 10,000+ homes and institutions across Uttar Pradesh with zero-carbon solar energy by 2030.</div>
+                </div>
+                <div class="border-l-4 border-leaf-600 pl-4 py-1">
+                  <div class="font-bold text-slate-900 text-base">Our Vision</div>
+                  <div class="text-xs text-slate-600 mt-1">To be the most customer-revered, transparent, and technically advanced rooftop solar EPC in Northern India.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual representation -->
+            <div class="grid grid-cols-2 gap-4">
+              <img src="https://th-i.thgim.com/public/incoming/wif8as/article70348485.ece/alternates/FREE_1200/solar%20energy.jpg" alt="Solar panels on rooftop" class="rounded-2xl object-cover h-64 w-full shadow-md">
+              <img src="https://www.truzonsolar.com/wp-content/uploads/2026/07/Solar-image.png" alt="Solar engineer working" class="rounded-2xl object-cover h-64 w-full shadow-md mt-6">
+              <div class="col-span-2 bg-leaf-50 border border-leaf-200 rounded-2xl p-5 flex items-center justify-between">
+                <div>
+                  <div class="font-bold text-leaf-900 text-sm">Registered Rooftop EPC Partner</div>
+                  <div class="text-xs text-slate-600">Alambagh, Lucknow, Uttar Pradesh 226023</div>
+                </div>
+                <span class="text-leaf-700 font-black text-xl">
+                  <i class="fa-solid fa-stamp"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERTISE & CERTIFIED TECHNICIANS -->
+      <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-solar-600 font-bold uppercase tracking-wider text-xs">Technical Superiority</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Our Expertise & Engineering Standards</h2>
+            <p class="text-slate-600 mt-2 text-sm">We believe a solar plant is a 25-year financial asset. Here is how we guarantee maximum generation.</p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm">
+              <div class="w-12 h-12 rounded-xl bg-solar-100 text-solar-700 flex items-center justify-center text-xl mb-5">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 mb-2">3D Shadow & Azimuth Analysis</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Before drilling a single bolt, our engineers conduct precision shadow analysis using specialized solar simulation software to determine ideal pitch (26°-28° for Lucknow) for peak annual generation.
+              </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm">
+              <div class="w-12 h-12 rounded-xl bg-leaf-100 text-leaf-700 flex items-center justify-center text-xl mb-5">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 mb-2">Dual Earthing & Lightning Protection</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                We deploy copper-bonded chemical earthing with specialized lightning arrestors (ESE) to protect your home electronics and panel inverters from monsoon electrical surges.
+              </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm">
+              <div class="w-12 h-12 rounded-xl bg-solar-100 text-solar-700 flex items-center justify-center text-xl mb-5">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="font-bold text-lg text-slate-900 mb-2">Certified Electrical Crew</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Our technicians hold official electrical wireman licenses and follow MNRE and BIS guidelines for DC/AC cable crimping, UV-resistant conduits, and IP65-rated distribution boxes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCAL ADVANTAGE CALLOUT -->
+      <section class="py-12 bg-white border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+          <div class="inline-block p-3 bg-solar-100 text-solar-800 rounded-full mb-3 text-xl">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-2">We Are Located Right Here In Lucknow</h3>
+          <p class="text-slate-600 text-sm max-w-xl mx-auto mb-6">
+            Unlike aggregators working remotely out of Delhi or Bengaluru, Onkar Home Solutions has physical roots in Alambagh. Our technicians are ready to visit your rooftop whenever you require support.
+          </p>
+          <div class="flex justify-center gap-4">
+            <button onclick="navigateTo('contact')" class="bg-leaf-700 hover:bg-leaf-800 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+              Find Our Office
+            </button>
+            <a href="tel:09792222261" class="border border-slate-300 hover:bg-slate-50 text-slate-800 font-semibold px-6 py-2.5 rounded-xl text-sm transition">
+              Call 097922 22261
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. SERVICES PAGE                           -->
+    <!-- ========================================== -->
+    <section id="page-services" class="page-section">
+      
+      <!-- Services Banner -->
+      <div class="bg-gradient-to-r from-leaf-950 via-leaf-900 to-solar-900 text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center space-y-3">
+          <span class="text-solar-400 font-bold uppercase tracking-wider text-xs" style="color:#d97706;">End-to-End Rooftop Solar Portfolio</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold" style="color: #d97706;">Our Solar Solutions & Services</h1>
+          <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base" style="color: #064e3b;">
+            Custom engineered solar systems for independent bungalows, residential apartments, schools, hospitals, and commercial establishments in Lucknow.
+          </p>
+        </div>
+      </div>
+
+      <!-- DETAILED BREAKDOWN OF SOLAR SOLUTIONS -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- SERVICE 1: ON-GRID SOLAR -->
+        <div class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="lg:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-leaf-100 text-leaf-800 text-xs font-bold uppercase">
+              <i class="fa-solid fa-plug-circle-bolt"></i> Ideal for Residential Homes
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">On-Grid Solar Systems (Net Metering)</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              On-Grid (or Grid-Tied) systems are the most popular and cost-effective solar installations for Lucknow households with regular DISCOM electricity supply.
+            </p>
+            <div class="space-y-3 text-sm text-slate-700">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-leaf-600 mt-1"></i>
+                <div><strong>Bi-Directional Net Metering:</strong> Excess power generated during sunny daylight is fed back to the UPPCL grid. Your meter rotates backwards, wiping out your billing units!</div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-leaf-600 mt-1"></i>
+                <div><strong>Full PM Surya Ghar Subsidy:</strong> 100% eligible for the central DBT subsidy up to ₹78,000.</div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-leaf-600 mt-1"></i>
+                <div><strong>No Costly Battery Replacement:</strong> Lowest maintenance cost since there is no chemical battery depreciation.</div>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openBookingModal('On-Grid Solar System')" class="bg-leaf-700 hover:bg-leaf-800 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+                Request On-Grid Quote
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-6">
+            <img src="https://rumion.in/wp-content/uploads/al_opt_content/IMAGE/rumion.in/wp-content/uploads/2026/07/ongrid_9_11zon-1536.jpg.bv.webp" alt="On-grid solar installation" class="rounded-2xl shadow-lg w-full h-80 object-cover">
+          </div>
+        </div>
+
+        <!-- SERVICE 2: HYBRID SOLAR -->
+        <div class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="lg:col-span-6 order-2 lg:order-1">
+            <img src="https://www.jsdsolar.com/wp-content/uploads/20260921/101/e35e44d8f8f8e2792c7d3206b3b6ec5c.webp" alt="Hybrid solar system with inverter" class="rounded-2xl shadow-lg w-full h-80 object-cover">
+          </div>
+          <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-solar-100 text-solar-800 text-xs font-bold uppercase">
+              <i class="fa-solid fa-car-battery"></i> Uninterrupted 24x7 Power
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Hybrid Solar Systems (Grid + Battery)</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Designed specifically for areas that experience intermittent power fluctuations or prolonged power cuts. A hybrid system combines grid export capabilities with an intelligent energy storage battery bank.
+            </p>
+            <div class="space-y-3 text-sm text-slate-700">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-solar-600 mt-1"></i>
+                <div><strong>Continuous Power During Blackouts:</strong> When the grid fails, your critical loads (fans, lights, refrigerators, Wi-Fi, televisions) remain powered instantly.</div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-solar-600 mt-1"></i>
+                <div><strong>Lithium or Solar C10 Tubular:</strong> Compatible with both advanced high-density Lithium Ferro Phosphate (LFP) batteries and economical tubular batteries.</div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-solar-600 mt-1"></i>
+                <div><strong>Dual Operating Modes:</strong> Switch between self-consumption priority or maximum grid-feed mode with smartphone monitoring.</div>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openBookingModal('Hybrid Solar System')" class="bg-solar-500 hover:bg-solar-600 text-slate-900 font-bold px-6 py-2.5 rounded-xl text-sm transition">
+                Request Hybrid Quote
+              </button>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- SERVICE 3: OFF-GRID SOLAR -->
+        <div class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="lg:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-leaf-100 text-leaf-800 text-xs font-bold uppercase">
+              <i class="fa-solid fa-plug-circle-bolt"></i> Ideal for Residential Homes
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Off-Grid Solar Systems (Net Metering)</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Off-Grid (or Grid-Tied) systems are the most popular and cost-effective solar installations for Lucknow households with regular DISCOM electricity supply.
+            </p>
+            <div class="space-y-3 text-sm text-slate-700">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-leaf-600 mt-1"></i>
+                <div><strong>Bi-Directional Net Metering:</strong> Excess power generated during sunny daylight is fed back to the UPPCL grid. Your meter rotates backwards, wiping out your billing units!</div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-leaf-600 mt-1"></i>
+                <div><strong>Full PM Surya Ghar Subsidy:</strong> 100% eligible for the central DBT subsidy up to ₹78,000.</div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-leaf-600 mt-1"></i>
+                <div><strong>No Costly Battery Replacement:</strong> Lowest maintenance cost since there is no chemical battery depreciation.</div>
+              </div>
+            </div>
+            <div class="pt-4 flex items-center gap-4">
+              <button onclick="openBookingModal('On-Grid Solar System')" class="bg-leaf-700 hover:bg-leaf-800 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+                Request On-Grid Quote
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-6 order-2 lg:order-1 rounded-3">
+            <img src="https://www.gogreensolar.com/cdn/shop/t/32/assets/off-grids-2.jpg?v=40638682949385923651666042111" class="rounded-2xl shadow-lg w-full h-80 object-cover">
+          </div>
+        </div>
+
+
+        <!-- SERVICE 3: MULTI-BRAND OPTIONS -->
+        <div class="bg-slate-900 text-white p-8 sm:p-10 rounded-3xl shadow-xl">
+          <div class="max-w-3xl mb-8">
+            <span class="text-solar-400 font-bold uppercase tracking-wider text-xs">Unmatched Equipment Freedom</span>
+            <h2 class="text-2xl sm:text-3xl font-bold mt-1">Multi-Brand Equipment Options</h2>
+            <p class="text-slate-300 text-sm mt-2">
+              At Onkar Home Solutions, we believe in giving customers complete freedom of choice. We source directly from the most reputed national and international solar manufacturers:
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white/10 backdrop-blur p-5 rounded-xl border border-white/10">
+              <div class="text-solar-400 text-xl font-bold mb-1"><i class="fa-solid fa-solar-panel mr-2"></i> Solar Panels</div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                <strong>Brands:</strong> Tata Power Solar, Adani Solar, Waaree Energies, Loom Solar (Mono-Bifacial & TopCon). Up to 550Wp+ modules with 25-30 year linear output warranty.
+              </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur p-5 rounded-xl border border-white/10">
+              <div class="text-leaf-300 text-xl font-bold mb-1"><i class="fa-solid fa-microchip mr-2"></i> Solar Inverters</div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                <strong>Brands:</strong> Growatt, Sungrow, Luminous, Havells, Microtek, Solis. High-efficiency MPPT string and hybrid inverters with WiFi & cloud monitoring apps.
+              </p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur p-5 rounded-xl border border-white/10">
+              <div class="text-solar-400 text-xl font-bold mb-1"><i class="fa-solid fa-screwdriver-wrench mr-2"></i> Mounting & Cables</div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                <strong>Specs:</strong> Hot-dip galvanized (HDG) heavy gauge mounting rails, Polycab / Havells solar DC cables, IP66 waterproof combiner boxes with SPD surge diverters.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SERVICE 4: MAINTENANCE & AMC -->
+        <div class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+          <div class="lg:col-span-6 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-bold uppercase">
+              <i class="fa-solid fa-wrench"></i> Lifetime Longevity
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Preventive Maintenance & Solar AMC</h2>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Dust, bird droppings, and loose connections in Lucknow’s dry seasons can degrade solar output by 15-25%. Our maintenance team keeps your power plant generating at its theoretical ceiling.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-700">
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <i class="fa-solid fa-droplet text-leaf-600 mr-1.5"></i>
+                <strong>Demineralized Panel Wash:</strong> Soft-brush wash without causing micro-cracks on cell glass.
+              </div>
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <i class="fa-solid fa-temperature-half text-solar-600 mr-1.5"></i>
+                <strong>Thermal Infrared Inspection:</strong> Detecting hot spots and cell shading degradation.
+              </div>
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <i class="fa-solid fa-bolt-lightning text-leaf-600 mr-1.5"></i>
+                <strong>Earthing Resistance Testing:</strong> Annual verification of chemical earthing pits (&lt;5 Ohms).
+              </div>
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <i class="fa-solid fa-shield text-solar-600 mr-1.5"></i>
+                <strong>Structural Bolt Tightening:</strong> Pre-monsoon integrity and corrosion review.
+              </div>
+            </div>
+            <div class="pt-2">
+              <button onclick="openBookingModal('Solar Maintenance & AMC')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition">
+                Book Maintenance Visit
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-6">
+            <img src="https://allsunnature.com/uploads/1790581382_6aba1a86d8fd8.webp" alt="Solar panel maintenance cleaning" class="rounded-2xl shadow-lg w-full h-80 object-cover">
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. PM SURYA GHAR MUFT BIJLI YOJANA PAGE    -->
+    <!-- ========================================== -->
+    <section id="page-pm-surya" class="page-section">
+      
+      <!-- Dedicated Scheme Hero -->
+      <div class="bg-gradient-to-r from-solar-600 via-solar-500 to-leaf-700 text-slate-950 py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center space-y-4">
+          <div class="inline-flex items-center gap-2 bg-white/90 px-4 py-1.5 rounded-full text-slate-900 font-bold text-xs shadow-sm">
+            <i class="fa-solid fa-flag-checkered text-solar-600"></i> Government of India Central Scheme
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black tracking-tight">
+            PM Surya Ghar: Muft Bijli Yojana
+          </h1>
+          <p class="text-slate-900 font-medium max-w-3xl mx-auto text-base sm:text-lg" style="color: white;">
+            Avail up to <strong>300 units of free electricity every month</strong> for your residential home with a flat central direct subsidy of up to <strong>₹78,000</strong>.
+          </p>
+          <div class="pt-2">
+            <button onclick="openBookingModal('PM Surya Ghar Subsidy Assistance')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition">
+              Apply For PM Surya Ghar With Us
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEY HIGHLIGHTS -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+          <div class="bg-white p-6 rounded-2xl border-2 border-solar-200 shadow-sm text-center">
+            <div class="w-16 h-16 rounded-full bg-solar-100 text-solar-700 mx-auto flex items-center justify-center text-2xl mb-4 font-bold">
+              300
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Free Units / Month</h3>
+            <p class="text-slate-600 text-sm">Save thousands on monthly power bills. Zero net bill if generation matches usage.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border-2 border-leaf-200 shadow-sm text-center">
+            <div class="w-16 h-16 rounded-full bg-leaf-100 text-leaf-700 mx-auto flex items-center justify-center text-2xl mb-4 font-bold">
+              ₹78k
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Max DBT Subsidy</h3>
+            <p class="text-slate-600 text-sm">Transferred straight into your bank account within 30 days of net-meter commissioning.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm text-center">
+            <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-700 mx-auto flex items-center justify-center text-2xl mb-4 font-bold">
+              UPPCL
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">MVVNL Integration</h3>
+            <p class="text-slate-600 text-sm">We handle the technical feasibility review and net-meter procurement with DISCOM.</p>
+          </div>
+        </div>
+
+        <!-- SUBSIDY STRUCTURE TABLE -->
+        <body class="bg-slate-900 min-h-screen p-4 sm:p-8 flex items-center justify-center">
+
+  <div class="w-full max-w-6xl">
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden mb-8">
+      <!-- Header -->
+      <div class="p-6 sm:p-8 bg-slate-900 text-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-2 border-amber-500">
+        <div>
+          <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Official Central Government Scheme</span>
+          <h2 class="text-2xl font-bold mt-1">PM Surya Ghar Subsidy Structure (Residential)</h2>
+        </div>
+        <span class="bg-emerald-600 text-xs font-bold px-3.5 py-1.5 rounded-full text-white shadow-sm">Direct DBT to Bank Account</span>
+      </div>
+
+      <!-- Table Wrapper -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[800px]">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 text-xs sm:text-sm font-bold uppercase tracking-wider border-b border-slate-200">
+              <th class="py-4 px-6">System Capacity</th>
+              <th class="py-4 px-6">Suitable For House Load</th>
+              <th class="py-4 px-6 text-emerald-700">Central Subsidy</th>
+              <th class="py-4 px-6 text-emerald-700">UP State Subsidy</th>
+              <th class="py-4 px-6 text-amber-600">Total You Receive</th>
+              <th class="py-4 px-6">Estimated Generation / Day</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-sm sm:text-base">
+            <!-- Row 1 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-slate-900 whitespace-nowrap">1 kW Rooftop System</td>
+              <td class="py-4 px-6 text-slate-600">1-2 Fans, TV, Refrigerator, LED lights</td>
+              <td class="py-4 px-6 font-bold text-emerald-600 whitespace-nowrap">₹30,000</td>
+              <td class="py-4 px-6 font-bold text-emerald-600 whitespace-nowrap">₹15,000</td>
+              <td class="py-4 px-6 font-extrabold text-amber-600 text-lg whitespace-nowrap">₹45,000</td>
+              <td class="py-4 px-6 text-slate-600 whitespace-nowrap">approx. 4 - 4.5 Units / day</td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-slate-900 whitespace-nowrap">2 kW Rooftop System</td>
+              <td class="py-4 px-6 text-slate-600">All above + 1 Inverter AC (Daytime)</td>
+              <td class="py-4 px-6 font-bold text-emerald-600 whitespace-nowrap">₹60,000</td>
+              <td class="py-4 px-6 font-bold text-emerald-600 whitespace-nowrap">₹30,000</td>
+              <td class="py-4 px-6 font-extrabold text-amber-600 text-lg whitespace-nowrap">₹90,000</td>
+              <td class="py-4 px-6 text-slate-600 whitespace-nowrap">approx. 8 - 9 Units / day</td>
+            </tr>
+
+            <!-- Row 3 (Highlighted) -->
+            <tr class="bg-amber-50/50 hover:bg-amber-50 transition">
+              <td class="py-4 px-6 font-bold text-slate-900 flex items-center gap-2 whitespace-nowrap">
+                3 kW & Above <span class="bg-amber-200 text-amber-900 text-xs px-2 py-0.5 rounded font-bold">Most Popular</span>
+              </td>
+              <td class="py-4 px-6 text-slate-600">Full 2-3 BHK Home, 1-2 ACs, Geysers, Pumps</td>
+              <td class="py-4 px-6 font-bold text-emerald-700 whitespace-nowrap">₹78,000</td>
+              <td class="py-4 px-6 font-bold text-emerald-700 whitespace-nowrap">₹30,000</td>
+              <td class="py-4 px-6 font-extrabold text-amber-600 text-xl whitespace-nowrap">₹1,08,000</td>
+              <td class="py-4 px-6 text-slate-600 whitespace-nowrap">approx. 12 - 14 Units / day</td>
+            </tr>
+
+            <!-- Row 4 -->
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-4 px-6 font-bold text-slate-900 whitespace-nowrap">Above 3 kW to 10 kW</td>
+              <td class="py-4 px-6 text-slate-600">Large Villas, Multiple Floors, Commercial</td>
+              <td class="py-4 px-6 font-bold text-emerald-600 whitespace-nowrap">₹78,000</td>
+              <td class="py-4 px-6 font-bold text-emerald-600 whitespace-nowrap">₹30,000</td>
+              <td class="py-4 px-6 font-extrabold text-amber-600 text-lg whitespace-nowrap">₹1,08,000</td>
+              <td class="py-4 px-6 text-slate-600 whitespace-nowrap">16 - 45+ Units / day</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="p-4 bg-slate-50 text-xs text-slate-500 border-t border-slate-200">
+        * Note: Subsidy is applicable only for residential households on the National Portal (pmsuryaghar.gov.in). Grid connection and consumer name must match DISCOM electricity bill.
+      </div>
+    </div>
+  </div>
+
+        <!-- STEP-BY-STEP APPLICATION GUIDE -->
+        <div class="mb-16">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-leaf-700 font-bold uppercase tracking-wider text-xs">Zero Paperwork Headache</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">5-Step Hassle-Free Process With Onkar</h2>
+            <p class="text-slate-600 text-sm mt-2">We manage the national portal approvals and DISCOM coordination from start to finish.</p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 relative">
+              <div class="w-8 h-8 rounded-full bg-leaf-700 text-white font-bold flex items-center justify-center text-sm mb-3">1</div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">Portal Registration</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Registration on the National Solar Portal with your UP DISCOM Consumer ID and mobile OTP.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 relative">
+              <div class="w-8 h-8 rounded-full bg-leaf-700 text-white font-bold flex items-center justify-center text-sm mb-3">2</div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">DISCOM Feasibility</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                UPPCL / MVVNL verifies transformer capacity and issues technical feasibility approval for your load.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 relative">
+              <div class="w-8 h-8 rounded-full bg-leaf-700 text-white font-bold flex items-center justify-center text-sm mb-3">3</div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">Onkar Installation</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Our certified engineers assemble DCR panels, high-spec inverter, earthing pits, and surge protection.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 relative">
+              <div class="w-8 h-8 rounded-full bg-leaf-700 text-white font-bold flex items-center justify-center text-sm mb-3">4</div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">Net Meter & Testing</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                MVVNL inspects the rooftop site, replaces the old meter with a smart bi-directional meter, and gives commissioning certificate.
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 relative">
+              <div class="w-8 h-8 rounded-full bg-solar-500 text-slate-900 font-bold flex items-center justify-center text-sm mb-3">5</div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">DBT Subsidy Credit</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                We submit the commissioning report. Central subsidy up to ₹78,000 gets deposited straight to your bank account!
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- QUICK CALCULATOR INTERACTIVE COMPONENT -->
+        <div class="bg-gradient-to-br from-leaf-900 to-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-2xl">
+          <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <span class="text-solar-400 font-bold uppercase tracking-wider text-xs">Instant Estimation Tool</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold">Calculate Your Subsidy & Savings</h3>
+              <p class="text-slate-300 text-sm">
+                Move the slider to match your desired solar capacity and instantly see your eligible government subsidy and estimated monthly bill deduction.
+              </p>
+              
+              <div class="space-y-4 pt-2">
+                <div>
+                  <div class="flex justify-between text-sm font-semibold mb-2">
+                    <span>Select System Size:</span>
+                    <span id="calc-kw-display" class="text-solar-400 text-base font-bold">3 kW</span>
+                  </div>
+                  <input type="range" id="calc-slider" min="1" max="5" value="3" step="1" oninput="updateCalculator(this.value)" class="w-full accent-solar-400 h-2 bg-slate-700 rounded-lg cursor-pointer">
+                  <div class="flex justify-between text-xs text-slate-400 mt-1">
+                    <span>1 kW</span>
+                    <span>2 kW</span>
+                    <span>3 kW</span>
+                    <span>4 kW</span>
+                    <span>5 kW</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
+              <div class="grid grid-cols-2 gap-4 text-center">
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                  <div class="text-xs text-slate-300">Central Subsidy (DBT)</div>
+                  <div id="calc-subsidy" class="text-2xl sm:text-3xl font-black text-solar-400 mt-1">₹78,000</div>
+                  <div class="text-[10px] text-emerald-400 font-semibold mt-1">Direct Bank Credit</div>
+                </div>
+                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+                  <div class="text-xs text-slate-300">Monthly Bill Savings</div>
+                  <div id="calc-savings" class="text-2xl sm:text-3xl font-black text-white mt-1">₹2,800 - ₹3,600</div>
+                  <div class="text-[10px] text-slate-300 font-medium mt-1">~360 Units / month</div>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-xs text-slate-300">
+                  <i class="fa-solid fa-circle-check text-leaf-400 mr-1"></i> Based on Lucknow MVVNL residential tariff
+                </div>
+                <button onclick="openBookingModal('PM Surya Ghar - ' + document.getElementById('calc-kw-display').innerText)" class="w-full sm:w-auto bg-solar-500 hover:bg-solar-400 text-slate-900 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition">
+                  Claim This Subsidy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. CONTACT US PAGE                         -->
+    <!-- ========================================== -->
+    <section id="page-contact" class="page-section">
+      
+      <!-- Contact Header -->
+      <div class="bg-gradient-to-r from-leaf-950 to-slate-900 text-white py-16 px-4">
+        <div class="max-w-7xl mx-auto text-center space-y-3">
+          <span class="text-solar-400 font-bold uppercase tracking-wider text-xs" style="color:#d97706;">Let's Connect in Lucknow</span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold" style="color:#d97706;">Onkar Home Solutions</h1>
+          <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base" style="color:#064e3b;">
+            Have questions about solar panel pricing, roof suitability, or the PM Surya Ghar subsidy? Our local Lucknow team is ready to assist you.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Info Column -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 mb-2">Our Office & Experience Center</h2>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Visit our office or request our solar engineers to conduct an on-roof evaluation at your premises anywhere in Lucknow.
+              </p>
+            </div>
+
+            <!-- Details -->
+            <div class="space-y-6">
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-leaf-100 text-leaf-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Full Registered Address</h4>
+                  <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                    <strong>Onkar Home Solutions</strong><br>
+                    96, Asharam Bapu Ashram Rd, Vishnulok Colony, <br>
+                    Manas Nagar, Krishna Nagar, Alambagh, <br>
+                    Lucknow, Uttar Pradesh 226023
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-solar-100 text-solar-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Official Helpline Phone</h4>
+                  <p class="text-slate-600 text-sm mt-1">
+                    <a href="tel:09792222261" class="text-leaf-800 font-bold hover:underline text-base">097922 22261</a>
+                  </p>
+                  <p class="text-xs text-slate-500">Available: Mon - Sat (9:00 AM - 7:30 PM)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl shrink-0">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Instant WhatsApp Support</h4>
+                  <p class="text-slate-600 text-sm mt-1">
+                    Chat directly with our Lucknow engineering head for quick queries, bills sharing, and quotations.
+                  </p>
+                  <a href="https://wa.me/919792222261?text=Hello%20Onkar%20Home%20Solutions,%20I%20am%20interested%20in%20installing%20rooftop%20solar%20at%20my%20home%20in%20Lucknow." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg mt-2 border border-emerald-200 hover:bg-emerald-100">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (097922 22261)
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Google Maps preview -->
+            <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+              <iframe 
+                title="Onkar Home Solutions Lucknow Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.577143664182!2d80.87986347624333!3d26.789745865362924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bffb6bdc7a3e7%3A0x59bc3f5e6165cb54!2sONKAR%20HOME%20SOLUTIONS!5e0!3m2!1sen!2sin!4v1793771384239!5m2!1sen!2sin" 
+                width="100%" 
+                height="240" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+              <div class="bg-slate-50 p-2 text-center text-xs font-semibold text-slate-600">
+                <i class="fa-solid fa-map-pin text-red-500 mr-1"></i> Located near Krishna Nagar & Alambagh, Lucknow
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Contact Form Column with WhatsApp Direct Trigger -->
+          <div class="lg:col-span-7">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-xl">
+              <div class="mb-6">
+                <span class="text-xs uppercase font-bold text-solar-600 tracking-wider">Fast Inquiries</span>
+                <h3 class="text-2xl font-bold text-slate-900 mt-1">Send Us Your Solar Inquiry</h3>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">
+                  Fill in your details below. Once submitted, you can instantly push your inquiry directly to our WhatsApp support with 1-click!
+                </p>
+              </div>
+
+              <!-- Form -->
+              <form id="contact-full-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Full Name *</label>
+                    <input type="text" id="contact-name" required placeholder="e.g. Amit Sharma" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-leaf-600 focus:outline-none text-sm">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="contact-phone" required placeholder="097922 22261" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-leaf-600 focus:outline-none text-sm">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Lucknow Address & Landmark *</label>
+                  <input type="text" id="contact-address" required placeholder="e.g. Flat 302, Sector D, Krishna Nagar / Alambagh" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-leaf-600 focus:outline-none text-sm">
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Interested Solution *</label>
+                    <select id="contact-solution" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-leaf-600 focus:outline-none text-sm bg-white">
+                      <option value="On-Grid Solar (PM Surya Ghar Subsidy)">On-Grid Solar (PM Surya Ghar Subsidy)</option>
+                      <option value="Hybrid Solar with Battery Backup">Hybrid Solar with Battery Backup</option>
+                      <option value="Commercial / Industrial Rooftop">Commercial / Industrial Rooftop</option>
+                      <option value="Solar Maintenance / Cleaning AMC">Solar Maintenance / Cleaning AMC</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Approx. Monthly Bill (₹)</label>
+                    <input type="text" id="contact-bill" placeholder="e.g. ₹3,500 / month" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-leaf-600 focus:outline-none text-sm">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Message / Roof Details</label>
+                  <textarea id="contact-message" rows="3" placeholder="Tell us about your roof space (approx. sq ft), shade conditions, or preferred solar brands (Tata, Adani, etc.)" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-leaf-600 focus:outline-none text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-leaf-700 hover:bg-leaf-800 text-white font-extrabold py-3.5 rounded-xl text-base shadow-lg transition flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-paper-plane"></i> Submit Inquiry & Chat on WhatsApp
+                </button>
+              </form>
+
+              <!-- Submission Feedback Notification -->
+              <div id="contact-success" class="hidden mt-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-emerald-900 text-sm">Inquiry Received Successfully!</h5>
+                    <p class="text-xs text-emerald-700 mt-0.5">Opening WhatsApp to connect directly with Onkar Home Solutions solar engineer...</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FLOATING WHATSAPP CHAT BUTTON (RIGHT SIDE) -->
+  <!-- ========================================== -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end group">
+    <!-- Popover tooltip -->
+    <div class="mb-2 bg-slate-900 text-white text-xs py-1.5 px-3 rounded-lg shadow-xl hidden md:flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      Chat with Lucknow Solar Specialist
+    </div>
+    <a href="https://wa.me/919792222261?text=Hi%20Onkar%20Home%20Solutions,%20I%20am%20looking%20for%20a%20rooftop%20solar%20system%20in%20Lucknow.%20Please%20share%20details%20and%20subsidy%20rates." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 relative">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="absolute -top-1 -right-1 bg-red-500 text-white font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">1</span>
+    </a>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- BOOKING MODAL (POPUP)                      -->
+  <!-- ========================================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 animate-fadeIn">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-xl bg-solar-100 text-solar-700 flex items-center justify-center text-xl mx-auto mb-2">
+          <i class="fa-solid fa-solar-panel"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Book Free Solar Site Visit</h3>
+        <p class="text-xs text-slate-500 mt-1">Our certified engineer in Lucknow will evaluate your roof and prepare a customized 3D generation report.</p>
+      </div>
+
+      <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name</label>
+          <input type="text" id="modal-name" required placeholder="e.g. Ramesh Chandra" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp / Calling Number</label>
+          <input type="tel" id="modal-phone" required placeholder="097922 22261" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Lucknow Locality / Address</label>
+          <input type="text" id="modal-address" required placeholder="e.g. Alambagh, Krishna Nagar, Indira Nagar" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-leaf-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Selected Requirement</label>
+          <input type="text" id="modal-requirement" value="Rooftop Solar Site Survey" class="w-full px-3.5 py-2.5 text-sm border border-slate-200 rounded-xl bg-slate-50 text-slate-700 font-medium focus:outline-none">
+        </div>
+        <button type="submit" class="w-full bg-leaf-700 hover:bg-leaf-800 text-white font-bold py-3 rounded-xl text-sm transition shadow flex items-center justify-center gap-2 mt-2">
+          <i class="fa-brands fa-whatsapp text-emerald-300"></i> Confirm & Send Details to WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-solar-500 flex items-center justify-center text-slate-950 font-bold text-xl">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <div class="text-xl font-black tracking-tight text-white">
+              ONKAR <span class="text-solar-400">HOME SOLUTIONS</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Lucknow’s trusted solar EPC contractor. Bringing sustainable, bank-subsidized clean energy to homes, industries, and institutions across Uttar Pradesh.
+          </p>
+          <div class="text-xs text-slate-400 space-y-1">
+            <div class="flex items-center gap-2 text-solar-400 font-semibold">
+              <i class="fa-solid fa-certificate"></i> PM Surya Ghar Muft Bijli Yojana Authorized
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-leaf-400"></i> Multi-Brand Tier 1 Solar Panels & Inverters
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><button onclick="navigateTo('home')" class="hover:text-solar-400 transition">Home</button></li>
+            <li><button onclick="navigateTo('about')" class="hover:text-solar-400 transition">About Us</button></li>
+            <li><button onclick="navigateTo('services')" class="hover:text-solar-400 transition">Solar Solutions</button></li>
+            <li><button onclick="navigateTo('pm-surya')" class="hover:text-solar-400 transition">PM Surya Ghar Yojana</button></li>
+            <li><button onclick="navigateTo('contact')" class="hover:text-solar-400 transition">Contact & Location</button></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider">Our Solutions</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+            <li>Residential On-Grid Solar Systems</li>
+            <li>Hybrid Solar with Lithium Battery</li>
+            <li>Commercial Net Metering Projects</li>
+            <li>Multi-Brand Panels (Tata, Adani, Loom)</li>
+            <li>Annual Maintenance & Cleaning (AMC)</li>
+          </ul>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-white text-sm font-bold uppercase tracking-wider">Lucknow Office</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            <strong>Onkar Home Solutions</strong><br>
+            96, Asharam Bapu Ashram Rd, Vishnulok Colony, Manas Nagar, Krishna Nagar, Alambagh, Lucknow, Uttar Pradesh 226023
+          </p>
+          <div class="pt-2">
+            <div class="text-xs text-slate-400"> Support:</div>
+            <a href="tel:09792222261" class="text-solar-400 font-bold text-base hover:underline">097922 22261  onkarhomesolutions@gmail.com</a>
+          </div>
+          
+        </div>
+        
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © <span id="current-year"></span> Onkar Home Solutions. All Rights Reserved.
+        </div>
+        <div class="flex gap-4">
+          <span>Lucknow, Uttar Pradesh</span>
+          <span>•</span>
+          <span class="text-leaf-400">Save Power, Save Earth</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT: NAVIGATION & INTERACTION LOGIC -->
+  <!-- ========================================== -->
+  <script>
+    // Set current year
+    document.getElementById('current-year').innerText = new Date().getFullYear();
+
+    // 5-PAGE ROUTING SYSTEM
+    const pages = ['home', 'about', 'services', 'pm-surya', 'contact'];
+
+    function navigateTo(pageId) {
+      if (!pages.includes(pageId)) pageId = 'home';
+
+      // Hide all pages
+      pages.forEach(p => {
+        const pageEl = document.getElementById(`page-${p}`);
+        const navEl = document.getElementById(`nav-${p}`);
+        if (pageEl) pageEl.classList.remove('active');
+        if (navEl) {
+          navEl.classList.remove('text-leaf-700', 'bg-leaf-50', 'font-bold');
+          navEl.classList.add('text-slate-700');
+        }
+      });
+
+      // Show target page
+      const targetPage = document.getElementById(`page-${pageId}`);
+      const targetNav = document.getElementById(`nav-${pageId}`);
+      if (targetPage) targetPage.classList.add('active');
+      if (targetNav) {
+        targetNav.classList.remove('text-slate-700');
+        targetNav.classList.add('text-leaf-700', 'bg-leaf-50', 'font-bold');
+      }
+
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Update URL hash without reload
+      window.location.hash = pageId;
+    }
+
+    // Hash change handler for browser back/forward buttons
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) navigateTo(hash);
+    });
+
+    // Check initial hash on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const initialHash = window.location.hash.replace('#', '');
+      if (initialHash && pages.includes(initialHash)) {
+        navigateTo(initialHash);
+      } else {
+        navigateTo('home');
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Booking Modal controls
+    function openBookingModal(requirement = 'Rooftop Solar Site Survey') {
+      const modal = document.getElementById('booking-modal');
+      const reqInput = document.getElementById('modal-requirement');
+      if (reqInput) reqInput.value = requirement;
+      modal.classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      modal.classList.add('hidden');
+    }
+
+    // Modal submit handler with WhatsApp integration
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('modal-name').value;
+      const phone = document.getElementById('modal-phone').value;
+      const address = document.getElementById('modal-address').value;
+      const req = document.getElementById('modal-requirement').value;
+
+      const message = `*New Solar Site Visit Request - Onkar Home Solutions*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Location in Lucknow:* ${address}\n*Requirement:* ${req}\n\nPlease confirm the site visit schedule.`;
+
+      const encoded = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/919792222261?text=${encoded}`;
+
+      closeBookingModal();
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Hero quick form submit with WhatsApp redirect
+    function handleQuickSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('quick-name').value;
+      const phone = document.getElementById('quick-phone').value;
+      const bill = document.getElementById('quick-bill').value;
+      const locality = document.getElementById('quick-locality').value;
+
+      const message = `*Quick Solar Quote Request - Onkar Home Solutions*\n\n*Customer:* ${name}\n*Phone:* ${phone}\n*Locality:* ${locality}\n*Monthly Bill:* ${bill}\n\nPlease provide system capacity quote and PM Surya Ghar subsidy details.`;
+
+      const encoded = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/919792222261?text=${encoded}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Full Contact form submit with confirmation and WhatsApp launch
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const phone = document.getElementById('contact-phone').value;
+      const address = document.getElementById('contact-address').value;
+      const solution = document.getElementById('contact-solution').value;
+      const bill = document.getElementById('contact-bill').value || 'Not specified';
+      const notes = document.getElementById('contact-message').value || 'None';
+
+      const message = `*Detailed Solar Inquiry - Onkar Home Solutions Lucknow*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Address:* ${address}\n*Solution:* ${solution}\n*Current Bill:* ${bill}\n*Notes / Roof Specs:* ${notes}\n\nKindly contact me with an on-site feasibility review.`;
+
+      const encoded = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/919792222261?text=${encoded}`;
+
+      // Show confirmation box
+      const successEl = document.getElementById('contact-success');
+      successEl.classList.remove('hidden');
+
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 1000);
+    }
+
+    // Interactive PM Surya Ghar Calculator
+    function updateCalculator(kw) {
+      const displayEl = document.getElementById('calc-kw-display');
+      const subsidyEl = document.getElementById('calc-subsidy');
+      const savingsEl = document.getElementById('calc-savings');
+
+      displayEl.innerText = `${kw} kW`;
+
+      if (kw == 1) {
+        subsidyEl.innerText = "₹30,000";
+        savingsEl.innerText = "₹1,000 - ₹1,300";
+      } else if (kw == 2) {
+        subsidyEl.innerText = "₹60,000";
+        savingsEl.innerText = "₹1,900 - ₹2,400";
+      } else if (kw == 3) {
+        subsidyEl.innerText = "₹78,000";
+        savingsEl.innerText = "₹2,800 - ₹3,600";
+      } else if (kw == 4) {
+        subsidyEl.innerText = "₹78,000";
+        savingsEl.innerText = "₹3,800 - ₹4,800";
+      } else if (kw == 5) {
+        subsidyEl.innerText = "₹78,000";
+        savingsEl.innerText = "₹4,800 - ₹6,000";
+      }
+    }
+  </script>
+  <script>
+  // Icons Initialize
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
+  // Scroll Animation Logic for 3D Timeline
+  window.addEventListener('scroll', () => {
+    const timeline = document.getElementById('timeline-container');
+    const progressLine = document.getElementById('timeline-progress');
+    if (!timeline || !progressLine) return;
+
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    let progress = ((windowHeight / 2) - rect.top) / rect.height;
+    progress = Math.max(0, Math.min(1, progress));
+    progressLine.style.height = (progress * 100) + '%';
+
+    const rows = document.querySelectorAll('#process-timeline-section .step-row');
+    rows.forEach(row => {
+      const rowRect = row.getBoundingClientRect();
+      const card = row.querySelector('.step-card');
+      const node = row.querySelector('.node-container');
+
+      if (rowRect.top < windowHeight * 0.85) {
+        card.classList.add('active');
+        if (node) node.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
