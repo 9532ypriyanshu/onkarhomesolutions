@@ -1321,61 +1321,462 @@
         </div>
 
         <!-- QUICK CALCULATOR INTERACTIVE COMPONENT -->
-        <div class="bg-gradient-to-br from-leaf-900 to-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-2xl">
-          <div class="grid lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-6 space-y-4">
-              <span class="text-solar-400 font-bold uppercase tracking-wider text-xs">Instant Estimation Tool</span>
-              <h3 class="text-2xl sm:text-3xl font-extrabold">Calculate Your Subsidy & Savings</h3>
-              <p class="text-slate-300 text-sm">
-                Move the slider to match your desired solar capacity and instantly see your eligible government subsidy and estimated monthly bill deduction.
-              </p>
-              
-              <div class="space-y-4 pt-2">
-                <div>
-                  <div class="flex justify-between text-sm font-semibold mb-2">
-                    <span>Select System Size:</span>
-                    <span id="calc-kw-display" class="text-solar-400 text-base font-bold">3 kW</span>
-                  </div>
-                  <input type="range" id="calc-slider" min="1" max="5" value="3" step="1" oninput="updateCalculator(this.value)" class="w-full accent-solar-400 h-2 bg-slate-700 rounded-lg cursor-pointer">
-                  <div class="flex justify-between text-xs text-slate-400 mt-1">
-                    <span>1 kW</span>
-                    <span>2 kW</span>
-                    <span>3 kW</span>
-                    <span>4 kW</span>
-                    <span>5 kW</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Solar Subsidy & Savings Calculator Section Start -->
+<section class="sc-wrapper" id="calculator">
+  <div class="sc-card">
+    <!-- Left Column: Slider & Quick Specs -->
+    <div class="sc-left">
+      <span class="sc-tag">INSTANT ESTIMATION TOOL</span>
+      <h2 class="sc-heading">Calculate Your Subsidy &amp; Savings</h2>
+      <p class="sc-subtext">
+        Move the slider to match your desired solar capacity and instantly see your government subsidy, monthly unit generation, and bill savings.
+      </p>
 
-            <div class="lg:col-span-6 bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20">
-              <div class="grid grid-cols-2 gap-4 text-center">
-                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                  <div class="text-xs text-slate-300">Central Subsidy (DBT)</div>
-                  <div id="calc-subsidy" class="text-2xl sm:text-3xl font-black text-solar-400 mt-1">₹78,000</div>
-                  <div class="text-[10px] text-emerald-400 font-semibold mt-1">Direct Bank Credit</div>
-                </div>
-                <div class="p-4 rounded-xl bg-white/5 border border-white/10">
-                  <div class="text-xs text-slate-300">Monthly Bill Savings</div>
-                  <div id="calc-savings" class="text-2xl sm:text-3xl font-black text-white mt-1">₹2,800 - ₹3,600</div>
-                 
-                </div>
-              </div>
-              <div class="mt-6 pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div class="text-xs text-slate-300">
-                  <i class="fa-solid fa-circle-check text-leaf-400 mr-1"></i> Based on Lucknow MVVNL residential tariff
-                </div>
-                <button onclick="openBookingModal('PM Surya Ghar - ' + document.getElementById('calc-kw-display').innerText)" class="w-full sm:w-auto bg-solar-500 hover:bg-solar-400 text-slate-900 font-bold px-5 py-2.5 rounded-xl text-xs sm:text-sm transition">
-                  Claim This Subsidy Now
-                </button>
-              </div>
-            </div>
-          </div>
+      <div class="sc-slider-box">
+        <div class="sc-slider-header">
+          <label for="solarKwSlider">Select System Size:</label>
+          <span class="sc-kw-badge" id="kwDisplay">3 kW</span>
         </div>
 
+        <input
+          type="range"
+          id="solarKwSlider"
+          min="1"
+          max="10"
+          step="1"
+          value="3"
+          class="sc-range"
+        />
+
+        <div class="sc-ticks">
+          <span>1 kW</span>
+          <span>3 kW</span>
+          <span>5 kW</span>
+          <span>8 kW</span>
+          <span>10 kW</span>
+        </div>
       </div>
 
-    </section>
+      <!-- Technical Mini Info Strip -->
+      <div class="sc-specs-strip">
+        <div class="sc-spec-item">
+          <span class="sc-spec-label">Shadow-Free Roof Area</span>
+          <strong class="sc-spec-val" id="roofAreaDisplay">~300 sq. ft.</strong>
+        </div>
+        <div class="sc-spec-divider"></div>
+        <div class="sc-spec-item">
+          <span class="sc-spec-label">Yearly Savings</span>
+          <strong class="sc-spec-val" id="yearlySavingsDisplay">₹33,600 – ₹43,200</strong>
+        </div>
+        <div class="sc-spec-divider"></div>
+        <div class="sc-spec-item">
+          <span class="sc-spec-label">Est. Payback</span>
+          <strong class="sc-spec-val" id="paybackDisplay">~3.2 Years</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Output Metrics & CTA -->
+    <div class="sc-right">
+      <div class="sc-metrics-grid">
+        <!-- Box 1: Central Subsidy -->
+        <div class="sc-metric-box">
+          <span class="sc-metric-title">Central Subsidy (DBT)</span>
+          <div class="sc-metric-value sc-yellow" id="subsidyDisplay">₹78,000</div>
+          <span class="sc-metric-note sc-green">Direct Bank Credit</span>
+        </div>
+
+        <!-- Box 2: Monthly Units Generated -->
+        <div class="sc-metric-box">
+          <span class="sc-metric-title">Monthly Units Generated</span>
+          <div class="sc-metric-value sc-white" id="unitsDisplay">360 – 420</div>
+          <span class="sc-metric-note sc-muted">Units / Month (Avg.)</span>
+        </div>
+
+        <!-- Box 3: Monthly Bill Savings (Full Width) -->
+        <div class="sc-metric-box sc-full-box">
+          <div>
+            <span class="sc-metric-title">Estimated Monthly Bill Savings</span>
+            <span class="sc-metric-note sc-muted">Based on ₹6.5 – ₹7.5 / unit slab</span>
+          </div>
+          <div class="sc-metric-value sc-white" id="monthlySavingsDisplay">₹2,800 – ₹3,600</div>
+        </div>
+      </div>
+
+      <div class="sc-footer-row">
+        <div class="sc-tariff-note">
+          <span class="sc-check-icon">✓</span>
+          <span>Based on Lucknow MVVNL residential tariff</span>
+        </div>
+        <button type="button" class="sc-cta-btn" onclick="claimSubsidyWhatsApp()">
+          Claim This Subsidy Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sc-wrapper {
+    padding: 40px 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .sc-card {
+    max-width: 1140px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #06402b 0%, #09352b 48%, #0a1929 100%);
+    border-radius: 22px;
+    padding: 42px;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 36px;
+    align-items: center;
+    box-shadow: 0 20px 45px rgba(6, 35, 28, 0.22);
+    color: #ffffff;
+  }
+
+  .sc-tag {
+    display: inline-block;
+    color: #facc15;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .sc-heading {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+
+  .sc-subtext {
+    color: #cbd5e1;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0 0 28px 0;
+  }
+
+  .sc-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .sc-slider-header label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .sc-kw-badge {
+    color: #facc15;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  /* Custom Range Slider */
+  .sc-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #facc15 0%, #facc15 22.2%, #334155 22.2%, #334155 100%);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .sc-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #facc15;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .sc-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+
+  .sc-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #facc15;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+
+  .sc-ticks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+
+  .sc-specs-strip {
+    margin-top: 26px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sc-spec-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sc-spec-label {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-bottom: 3px;
+  }
+
+  .sc-spec-val {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .sc-spec-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* Right Panel */
+  .sc-right {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 24px;
+  }
+
+  .sc-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .sc-metric-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 18px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sc-full-box {
+    grid-column: span 2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 16px 20px;
+  }
+
+  .sc-metric-title {
+    display: block;
+    font-size: 12.5px;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+  }
+
+  .sc-full-box .sc-metric-title {
+    margin-bottom: 2px;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+
+  .sc-metric-value {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 5px;
+  }
+
+  .sc-full-box .sc-metric-value {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .sc-yellow {
+    color: #facc15;
+  }
+
+  .sc-white {
+    color: #ffffff;
+  }
+
+  .sc-metric-note {
+    font-size: 11.5px;
+    font-weight: 600;
+  }
+
+  .sc-green {
+    color: #34d399;
+  }
+
+  .sc-muted {
+    color: #94a3b8;
+    font-weight: 400;
+  }
+
+  .sc-footer-row {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sc-tariff-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: #cbd5e1;
+  }
+
+  .sc-check-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  .sc-cta-btn {
+    background: #f59e0b;
+    color: #0f172a;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .sc-cta-btn:hover {
+    background: #fbbf24;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 920px) {
+    .sc-card {
+      grid-template-columns: 1fr;
+      padding: 28px 22px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .sc-heading {
+      font-size: 25px;
+    }
+    .sc-metrics-grid {
+      grid-template-columns: 1fr;
+    }
+    .sc-full-box {
+      grid-column: span 1;
+      flex-direction: column;
+      text-align: center;
+      gap: 6px;
+    }
+    .sc-specs-strip {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .sc-spec-divider {
+      width: 100%;
+      height: 1px;
+    }
+    .sc-footer-row {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: center;
+    }
+    .sc-tariff-note {
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  const solarData = {
+    1:  { subsidy: "₹30,000", units: "120 – 140", monthly: "₹900 – ₹1,200",   yearly: "₹10,800 – ₹14,400",   area: "~100 sq. ft.",  payback: "~3.8 Years" },
+    2:  { subsidy: "₹60,000", units: "240 – 280", monthly: "₹1,850 – ₹2,400", yearly: "₹22,200 – ₹28,800",   area: "~200 sq. ft.",  payback: "~3.5 Years" },
+    3:  { subsidy: "₹78,000", units: "360 – 420", monthly: "₹2,800 – ₹3,600", yearly: "₹33,600 – ₹43,200",   area: "~300 sq. ft.",  payback: "~3.2 Years" },
+    4:  { subsidy: "₹78,000", units: "480 – 560", monthly: "₹3,750 – ₹4,800", yearly: "₹45,000 – ₹57,600",   area: "~400 sq. ft.",  payback: "~3.4 Years" },
+    5:  { subsidy: "₹78,000", units: "600 – 700", monthly: "₹4,700 – ₹6,000", yearly: "₹56,400 – ₹72,000",   area: "~500 sq. ft.",  payback: "~3.5 Years" },
+    6:  { subsidy: "₹78,000", units: "720 – 840", monthly: "₹5,600 – ₹7,200", yearly: "₹67,200 – ₹86,400",   area: "~600 sq. ft.",  payback: "~3.6 Years" },
+    7:  { subsidy: "₹78,000", units: "840 – 980", monthly: "₹6,550 – ₹8,400", yearly: "₹78,600 – ₹1,00,800", area: "~700 sq. ft.",  payback: "~3.7 Years" },
+    8:  { subsidy: "₹78,000", units: "960 – 1,120", monthly: "₹7,500 – ₹9,600", yearly: "₹90,000 – ₹1,15,200", area: "~800 sq. ft.",  payback: "~3.7 Years" },
+    9:  { subsidy: "₹78,000", units: "1,080 – 1,260", monthly: "₹8,450 – ₹10,800", yearly: "₹1,01,400 – ₹1,29,600", area: "~900 sq. ft.", payback: "~3.8 Years" },
+    10: { subsidy: "₹78,000", units: "1,200 – 1,400", monthly: "₹9,400 – ₹12,000", yearly: "₹1,12,800 – ₹1,44,000", area: "~1,000 sq. ft.", payback: "~3.8 Years" }
+  };
+
+  const slider = document.getElementById("solarKwSlider");
+
+  function updateSolarCalculator(kw) {
+    const info = solarData[kw];
+    document.getElementById("kwDisplay").textContent = kw + " kW";
+    document.getElementById("subsidyDisplay").textContent = info.subsidy;
+    document.getElementById("unitsDisplay").textContent = info.units;
+    document.getElementById("monthlySavingsDisplay").textContent = info.monthly;
+    document.getElementById("yearlySavingsDisplay").textContent = info.yearly;
+    document.getElementById("roofAreaDisplay").textContent = info.area;
+    document.getElementById("paybackDisplay").textContent = info.payback;
+
+    const percent = ((kw - 1) / 9) * 100;
+    slider.style.background = `linear-gradient(to right, #facc15 0%, #facc15 ${percent}%, #334155 ${percent}%, #334155 100%)`;
+  }
+
+  slider.addEventListener("input", function () {
+    updateSolarCalculator(this.value);
+  });
+
+  function claimSubsidyWhatsApp() {
+    const kw = slider.value;
+    const info = solarData[kw];
+    const phone = "919792222261"; // Apna WhatsApp number yahan daalein
+    const msg = `Namaste Onkar Home Solutions, mujhe *${kw} kW* Solar Rooftop System lagwana hai.\n\n• Eligible Subsidy: ${info.subsidy}\n• Est. Generation: ${info.units} units/month\n• Est. Savings: ${info.monthly}/month\n\nKripya free site survey aur quotation share karein.`;
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank");
+  }
+
+  // Initialize default 3kW view
+  updateSolarCalculator(3);
+</script>
+<!-- Solar Subsidy & Savings Calculator Section End -->
 
     <!-- ========================================== -->
     <!-- 5. CONTACT US PAGE                         -->
